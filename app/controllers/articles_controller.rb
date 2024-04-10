@@ -2,6 +2,9 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    if @article.nil?
+      redirect_to articles_path, alert: "Article not found"
+    end
   end
 
   def index
@@ -39,7 +42,7 @@ class ArticlesController < ApplicationController
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
-    redirect_to articles_path
+    redirect_to articles_path, status: :see_other
   end
 
 end

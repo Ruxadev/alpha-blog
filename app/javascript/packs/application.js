@@ -15,4 +15,19 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
+import { Turbo } from "@hotwired/turbo-rails";
+
+import { Application } from "stimulus";
+import { definitionsFromContext } from "stimulus/webpack-helpers";
+//= require turbo
+const application = Application.start();
+const context = require.context("./controllers", true, /\.js$/);
+application.load(definitionsFromContext(context));
+
+document.addEventListener("turbo:load", () => {
+  Turbo.setProgressBarDelay(100);
+  Turbo.enableDebugging();
+});
+
 console.log('Hello World from Webpacker')
+
