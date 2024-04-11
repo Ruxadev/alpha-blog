@@ -7,14 +7,19 @@ gem "rails", "~> 7.1.3", ">= 7.1.3.2"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
+
+gem 'sass-rails', '>=6'
 gem 'webpacker', '~> 5.0'
 gem 'turbo-rails'
+gem 'turbolinks', '~>5'
+gem 'jbuilder', '~> 2.7'
 
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
@@ -30,3 +35,5 @@ group :development do
   gem 'byebug', '~> 11.1'
 end
 
+
+gem "bootstrap", "~> 5.3"
