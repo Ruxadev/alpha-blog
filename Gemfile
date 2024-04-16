@@ -13,6 +13,7 @@ gem 'webpacker', '~> 5.0'
 gem 'turbo-rails'
 gem 'turbolinks', '~>5'
 gem 'jbuilder', '~> 2.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
